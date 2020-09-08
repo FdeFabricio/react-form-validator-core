@@ -19,6 +19,7 @@ Default validation rules:
 + maxNumber
 + minFloat
 + maxFloat
++ maxDecimalPlaces
 + isString
 + minStringLength
 + maxStringLength

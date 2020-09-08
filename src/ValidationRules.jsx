@@ -50,6 +50,8 @@ const validations = {
 
     minFloat: (value, min) => isEmpty(value) || parseFloat(value) >= parseFloat(min),
 
+    maxDecimalPlaces: (value, max) => validations.isFloat(value) && (!value.includes('.') || value.splice('.')[1].length <= max),
+
     isString: value => isEmpty(value) || typeof value === 'string' || value instanceof String,
     minStringLength: (value, length) => validations.isString(value) && value.length >= length,
     maxStringLength: (value, length) => validations.isString(value) && value.length <= length,
